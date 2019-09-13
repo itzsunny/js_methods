@@ -141,3 +141,61 @@ var numbers = [1, 2, 3, 4, 5, 6, 23, 121, 345, 33, 23, 12, 435, 642, 66, 23];
 
 
 //1
+numbers.map((integers) => {return(integers)} );
+
+//2
+numbers.map((integers) => {return (integers+5)});
+
+//3
+numbers.map((integers) => {return(`${integers+1}`)});
+
+//4
+numbers.map((integers) => {return (integers%2)});
+
+//5
+numbers.map((integers) => {return ((integers/2)*5)});
+
+
+//forEach 
+
+
+//1
+var even = [];
+var odd = [];
+numbers.forEach((integers) => {if (integers%2 === 0){
+  even.push(integers);
+  } else {
+  odd.push(integers);
+  }
+});
+
+//2
+
+var prime_ = [];
+numbers.forEach(function prime(integer){
+  int ="";
+   for(let i =2 ;i % integer === 0 ;int.push(integer)){
+     if (int = (int%int ===0)){
+       prime_.push(int);
+     } else {
+       return (`${integer} not a prime number`);
+     }
+   }
+});
+
+//3
+
+var prime_ = [];
+let int = [];
+numbers.forEach(function prime(integer) {
+  if (integer % 2 === 0){
+    return (`${integer} is even number`)
+  } else if (integer % 2 !== 0){
+    int.push(integer);
+  }
+  int.forEach(($int) => {if (int % int === 0) {prime_.push(int)};} );
+  }
+);
+
+//4
+numbers.forEach( (integer)  => {});
