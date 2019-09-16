@@ -5,10 +5,36 @@ var strings = ["this", "is", "a", "collection", "of", "words"];
 // Use the above two arrays and practice array methods
 
 // Find largest number in numbers
-
+ var number = Math.max(...numbers);
+ console.log(number);
 // Find longest string in strings
+var long = [];
+function longest(strings) {
+  let max = -Infinity;
+  let maxStr = '';
+  strings.forEach(str => {
+    if (str.length > max) {
+      max = str.length;
+      maxStr = str;
+    }
+  });
 
+  return maxStr;
+}
+
+function longestAlt(strings) {
+  let max = Math.max(...strings.map(str => str.length));
+
+   strings.forEach(str => {
+    if (str.length == max) {
+      console.log(str);
+      return str;
+    }
+  })
+}
+console.log(longest(strings));
 // Find all the even numbers
+numbers.map()
 
 // Find all the odd numbers
 

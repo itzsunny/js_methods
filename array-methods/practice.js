@@ -130,9 +130,107 @@ cuts.map((styles) =>  {return(styles)});
 cuts.map((styles,index) => {return(`${styles} with index ${index}`)});
 
 //3
-cuts.map(function cuts_ (styles) {
+cuts.map(function cuts_ (styles) { 
+  return styles.toUpperCase();
+});
 
-})
+//4 
+cuts.map(styles => {return styles[styles.length-1]+styles.length});
+
+//5
+cuts.map((styles) => { return styles.charAt(3)});
+
+
+//forEach 
+
+
+//1
+char=[];
+cuts.filter((word, i) => {
+  if (word[0] === "S" || word[0] === "C" || word[0] === "T") {
+    char.push(word);
+  }
+});
+
+//2
+cuts.forEach((words,i) => {for (let char of words){console.log(`${char} and having index ${i}`)}});
+
+//2
+cuts.forEach((words,i) => { console.log(words.toLowerCase())});
+
+//3
+var bad_cuts = [];
+var good_cuts = [];
+cuts.forEach(function styles(cuts_) {
+  if (cuts_.length < 8) {
+    bad_cuts.push(cuts_);
+  } else {
+    good_cuts.push(cuts_);
+  }
+});
+
+//4 
+cuts.forEach((styles,i) => { if (styles.includes("i")){ console.log(styles);}});
+
+//5
+cuts.forEach((styles) => {if (styles.startsWith("S") || styles.endsWith("k")){
+  console.log(styles);
+}});
+
+
+//filter 
+
+
+//1
+cuts.filter((word, i) => {
+  return (word[0] === "S" || word[0] === "C" || word[0] === "T");
+  }
+);
+
+//2
+cuts.filter(function cuts_(word) {
+  if ( word.length < 8 && ((word.startsWith("S") || word.startsWith("T")) || (word.endsWith("n") || word.endsWith("k") || word.endsWith("t")))){
+    return(word);
+  }
+});
+
+//3
+even =[];
+cuts.filter(function styles(cuts_) {
+if (cuts_.length %2 === 0) {
+  even.push(cuts_);
+  return even;
+}
+});
+
+//4 
+five =[];
+six = [];
+seven = [];
+seven_plus = [];
+cuts.filter (styles => {
+   (
+     ((styles.length === 5) ? five.push(styles)) && ((styles.length === 6) ? six.push(styles)) && ((styles.length === 7) ? seven.push(styles)) 
+     && ((styles.length > 7) ? seven_plus.push(styles))
+     )
+    }
+    );
+ 
+//5
+five_less =[];
+six = [];
+seven_plus = [];
+cuts.filter( styles => {
+  len = styles.length;
+  if (len === 5 || len < 5){
+    five_less.push(styles);
+  } else if (len === 6) {
+    six.push(styles);
+  } else if (len === 7 || len > 7) {
+    seven_plus.push(styles);
+  }
+}); 
+
 
 
 var numbers = [1, 2, 3, 4, 5, 6, 23, 121, 345, 33, 23, 12, 435, 642, 66, 23];
@@ -174,8 +272,8 @@ numbers.forEach((integers) => {if (integers%2 === 0){
 var prime_ = [];
 numbers.forEach(function prime(integer){
   int ="";
-   for(let i =2 ;i % integer === 0 ;int.push(integer)){
-     if (int = (int%int ===0)){
+   for(let i =2 ;i % integer !== 0 ;int.push(integer)){
+     if (int = (int%int === 0)){
        prime_.push(int);
      } else {
        return (`${integer} not a prime number`);
@@ -198,4 +296,7 @@ numbers.forEach(function prime(integer) {
 );
 
 //4
-numbers.forEach( (integer)  => {});
+numbers.forEach( ()  => {console.log(numbers.sort( (a,b) => {console.log(a - b)}))});
+
+//5
+numbers.sort((a, b) => {return (a - b)});
