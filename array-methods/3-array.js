@@ -14,8 +14,11 @@ var words = [
 
 // Write a function uniqueArray that receives an array of words as a parameter. And remove the duplicates, and return a new array. 
 // (indexOf)
-
-
+function uniqueArray(words) {
+var words_ =[];
+words_.push(words.filter((e, i) => (words.indexOf(e) == i)));
+  return words_;
+} 
 
 var words2 = [
   'machine',
@@ -29,6 +32,11 @@ var words2 = [
 ];
 
 // Write a function doesWordExist that will take in an array of words as one argument, and a word to search for as the other. Return true if it exists, otherwise, return false. Don't use indexOf for this one.
+
+function doesWordExist(words2, search) {
+  item = words2.includes(search);
+  return item;
+}
 
 
 
@@ -49,7 +57,10 @@ var words3 = [
 
 
 // Write a function howManyTimes that will take in an array of words as one argument, and a word to search for as the other. The function will return the number of times that word appears in the array.
-
+function howManyTimes(words3,word) {
+  repeat = words3.filter(value => (value === word)).length;
+  return repeat;
+}
 
 
 
@@ -75,6 +86,10 @@ let data = [
 ]
 
 
+data.reduce(function sum (pop_, value){
+   return (value.country == 'China') ? pop_ : pop_ + value.pop;
+  }, 0);
+
 // Use reduce method and summorize the collection like
 // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
 const fruitBasket = [
@@ -89,7 +104,7 @@ const fruitBasket = [
   'cherry',
   'orange',
   'fig'
-];
+
 
 
 
